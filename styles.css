@@ -1,0 +1,469 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+    color: #0a2f51;
+}
+
+html, body {
+    overflow-x: hidden; /* Evita overflow lateral */
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Certifique-se de que o conteúdo preencha a tela */
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #0a2f51;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #f5a623;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Adicionando espaçamento ao conteúdo para não ficar embaixo do cabeçalho fixo */
+body {
+    padding-top: 80px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f5a623;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #0a2f51;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    animation: bounceIn 2s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #f5a623;
+    color: #0a2f51;
+}
+
+/* Animações keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Seção de Serviços */
+.services-section {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.services-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #0a2f51;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.service-item {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item .service-icon {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #f5a623;
+}
+
+.service-item p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.cta-button {
+    background-color: #0a2f51;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.cta-button:hover {
+    background-color: #f5a623;
+    color: #0a2f51;
+}
+
+/* Efeito de hover */
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de Depoimentos */
+.testimonials-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    color: #0a2f51;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial-item h4 {
+    text-align: right;
+    color: #f5a623;
+    margin-top: 20px;
+}
+
+/* Seção de Contato */
+.contact-section {
+    padding: 50px 0;
+    background-color: #f5a623;
+    color: white;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-section input:focus, 
+.contact-section textarea:focus {
+    outline: none;
+    border: 2px solid #0a2f51;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section button {
+    background-color: #0a2f51;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #FFFFFF;
+    color: #0a2f51;
+}
+
+/* Feedback de envio de formulário */
+form:after {
+    content: 'Mensagem enviada com sucesso!';
+    display: none;
+    color: white;
+    background-color: #0a2f51;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+form.submitted:after {
+    display: block;
+}
+
+/* Footer */
+footer {
+      background-color: #0a2f51;
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 15px;
+    color: #f5a623;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer-section a {
+    color: #f5a623;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+      text-align: center;
+    padding: 20px 0;
+    background-color: #08273a;
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Seção de Parceiros */
+.partners-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 2.5rem;
+    color: #0a2f51;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    animation: slide 20s infinite linear;
+}
+
+.carousel-slide img {
+    width: 200px;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsividade para o carrossel */
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex-direction: row;
+    }
+
+    .carousel-slide img {
+        width: 150px;
+        margin: 0 10px;
+    }
+}
+
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+#whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+}
